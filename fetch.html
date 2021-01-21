@@ -6,11 +6,18 @@
   </head>
   <body>
     <input type="button" name="" value="fetch" onclick="
-      fetch('css').then(function(response){
+      /*
+        fetch('css').then(function(response){
         response.text().then(function(text){
           alert(text);
         })
       })
+    */  
+      fetch('js').then(function(response){
+      if(response.status == '404'){
+            alert('not found');
+         }                                               
+      });                                                  
     ">
   </body>
 </html>
