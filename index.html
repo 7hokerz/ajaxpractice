@@ -12,20 +12,8 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a onclick="
-      fetch('html').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      })
-      ">HTML</a></li>
-    <li><a onclick="
-      fetch('css').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      })
-      ">CSS</a></li>
+    <li><a onclick="fetchPage('html');">HTML</a></li>
+    <li><a onclick="fetchPage('css');">CSS</a></li>
     <li><a onclick="
       document.querySelector('article').innerHTML = '<h2>JavaScript</h2>JavaScript is....';
       ">JavaScript</a></li>
@@ -34,5 +22,14 @@
   <article>
 
   </article>
+  <script>
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    }//함수로 리팩토링
+  </script>
 </body>
 </html>
