@@ -15,21 +15,25 @@
       */
       //Asynchronous
       /*
-      fetch('html')은 ()안의 인자(파일)을 요청하는 함수
-      then()은 앞의 처리가 끝나면 ()안의것을 실행
-      (앞의 것이 처리되는동안 다른코드가 실행될수있음.)
-      function(){}<<익명함수(이름이 없음)(여기서는 콜백함수)
-      response 객체:서버가 클라이언트의 요청에 응답하는 정보를 담고 있음.
-      여러가지 속성이 존재
+        fetch('html')은 ()안의 인자(파일)을 요청하는 함수
+        then()은 앞의 처리가 끝나면 ()안의것을 실행
+        (앞의 것이 처리되는동안 다른코드가 실행될수있음.)
+        function(){}<<익명함수(이름이 없음)(여기서는 콜백함수)
+        response 객체:서버가 클라이언트의 요청에 응답하는 정보를 담고 있음.
+        여러가지 속성이 존재
       */
+      /*
+
+      */
+
       fetch('js').then(function(res){
        if(res.status == '404'){
            alert('not found');
            console.log(res.status);
         }
      });
-     console.log(1);
-     console.log(2);
+     console.log(1); // fetch실행후 이곳이 출력
+     console.log(2); // 동일
     ">
   </body>
 </html>
